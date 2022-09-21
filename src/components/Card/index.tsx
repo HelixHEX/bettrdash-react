@@ -1,28 +1,6 @@
 import React from 'react';
-import '../../styles.css';
-
-type CardProps = {
-  project: {
-    active: boolean;
-    createdAt: string;
-    description: string;
-    github_url: string;
-    image_url: string;
-    language: string;
-    live_url: string;
-    name: string;
-    updatedAt: string;
-  };
-  style?: StyleProps;
-};
-
-export type StyleProps = {
-  // width?: number | string;
-  // height?: number | string;
-  // titleFontSize?: number | string;
-  // descriptionFontSize?: number | string;
-  imageBackgroundColor?: string;
-};
+import '../../../styles.css';
+import { CardProps } from '../../utils/types';
 
 const Card = ({
   project,
@@ -51,7 +29,7 @@ const Card = ({
             <div className="bettr-card-title">{project.name}</div>
             <div
               style={{
-                backgroundColor: project.active ? '#FF6A6A' : '#3DC25A',
+                backgroundColor: project.active ? '#3DC25A' : '#FF6A6A',
               }}
               className="bettr-card-status"
             >

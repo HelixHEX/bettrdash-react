@@ -1,8 +1,10 @@
 body {
   font-family: "Inter";
+  margin: 0 0 0 0 ;
 }
 
-.bettr-card-loading {
+/* Loading */
+.bettr-loading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,12 +12,13 @@ body {
   font-family: "Inter";
 }
 
-/* Display projects in a grid */
-.bettr-card-container {
+/* Grid */
+.bettr-grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   row-gap: 3rem;
   column-gap: 1rem;
+  width: 100%;
 }
 
 /* Card  */
@@ -30,11 +33,7 @@ body {
   box-shadow: 0 1px 50px rgba(0, 0, 0, 0.12), 0 1px 50px rgba(0, 0, 0, 0.24);
 }
 
-/*
-move card up when hovered
-*/
 .bettr-card :hover {
-  /* box-shadow: 0 1px 50px rgba(0, 0, 0, 0.12), 0 1px 50px rgba(0, 0, 0, 0.24); */
   cursor: pointer;
 }
 
@@ -86,4 +85,60 @@ move card up when hovered
   flex: 1;
   margin-top: 15px;
   font-weight: 200;
+}
+
+
+/* List */
+/* .bettr-list-container {
+  width: 100%;
+} */
+
+/* List item */
+.bettr-list {
+  margin-top: 20px;
+  border-radius: 5px;
+  min-height: 50px;
+  height: auto;
+  box-shadow: 0 1px 50px rgba(0, 0, 0, 0.12), 0 1px 50px rgba(0, 0, 0, 0.24);
+  align-content: center;
+}
+
+.bettr-list :hover {
+  cursor: pointer;
+  background-color: #3089D6;
+  border-radius: 5px;
+}
+
+.bettr-list-image-container {
+  height: 40px;
+  width: 40px;
+  align-self: center;
+}
+
+.bettr-list-image {
+  height: 100%;
+  width: 100%;
+}
+
+.bettr-list-title {
+  font-weight: 500;
+  font-size: 15px;
+  align-self: center;
+  margin-left: 10px;
+}
+
+.bettr-list-status {
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  justify-content: center;
+  display: flex;
+  align-self: center;
+}
+
+.bettr-list-status p {
+   color: #fff;
+   font-size: 12px;
+   align-self: center;
+   font-weight: 400;
 }

@@ -10,7 +10,7 @@
   "files": [
     "dist",
     "src",
-    "src/styles.css"
+    "styles.css"
   ],
   "engines": {
     "node": ">=10"
@@ -26,11 +26,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "peerDependencies": {
-    "@fontsource/inter": "^4.5.12",
-    "axios": "^0.27.2",
-    "react": ">=16"
-  },
+  "peerDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -77,5 +73,9 @@
     "tslib": "^2.4.0",
     "typescript": "^4.8.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@fontsource/inter": "^4.5.12",
+    "axios": "^0.27.2",
+    "react": ">=16"
+  }
 }

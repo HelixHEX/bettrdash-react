@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../utils/constants';
-import Card, { StyleProps } from '../Card';
-import '../../styles.css';
+import '../../../styles.css';
+import { ProjectProps, Props } from '../../utils/types';
+import List from '../List';
 
-type GridProps = {
-  apiKey: string;
-  style?: StyleProps;
-};
-
-const Grid = ({ apiKey, style }: GridProps) => {
+const BettrList = ({ apiKey, style }: Props) => {
   const [projects, setProjects] = useState([]);
   const [error, setError] = useState<null | string>(null);
   const [loading, setLoading] = useState(true);
@@ -39,16 +35,17 @@ const Grid = ({ apiKey, style }: GridProps) => {
     };
     main();
   }, []);
+
   return (
     <>
       {loading ? (
-        <div className="bettr-card-loading">Loading...</div>
+        <div className="bettr-loading">Loading...</div>
       ) : error ? (
-        <div className="bettr-card-error">{error}</div>
+        <div className="bettr-error">{error}</div>
       ) : (
-        <div className="bettr-card-container">
-          {projects.map((project: any, index: number) => (
-            <Card style={style} project={project} key={index} />
+        <div className="bettr-list-container">
+          {projects.map((project: ProjectProps, index: number) => (
+            <List style={style} project={project} key={index} />
           ))}
         </div>
       )}
@@ -56,4 +53,4 @@ const Grid = ({ apiKey, style }: GridProps) => {
   );
 };
 
-export default Grid;
+export default BettrList;

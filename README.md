@@ -18,14 +18,15 @@ yarn add bettrdash-react axios @fontsource/inter
 
 **Note:** This component requires an API key to be passed in as a prop. If you do not have an API key, please visit [BettrDash](https://bettrdash.eliaswambugu.com) to get one.
 
-### Grid Component
+### BettrGrid Component
 
 ```jsx
-import { Grid } from 'bettrdash-react';
+import { BettrGrid } from 'bettrdash-react';
+import "bettrdash-react/styles.css";
 
 const Component = () => {
   return (
-    <Grid
+    <BettrGrid
       apiKey="api-key"
       style={{
         imageBackgroundColor: 'black',
@@ -37,7 +38,28 @@ const Component = () => {
 export default Component;
 ```
 
-## BettrCard Component Props
+
+### BettrList Component
+
+```jsx
+import { BettrList } from 'bettrdash-react';
+import "bettrdash-react/styles.css";
+
+const Component = () => {
+  return (
+    <BettrList
+      apiKey="api-key"
+      style={{
+        imageBackgroundColor: 'black',
+      }}
+    />
+  );
+};
+
+export default Component;
+```
+
+## BettrGrid/BettrList Component Props
 
 | Property | Type   | Required | Default | Description                                                             |
 | -------- | ------ | -------- | ------- | ----------------------------------------------------------------------- |
@@ -85,6 +107,7 @@ export default Component;
 | styles   | Object | false    | -       | How to style the cards (refer to style props table for styling optoins)              |
 
 ## Style Props
+**Note**: Styles can be further edited in the styles.css file located in (node_modules/bettrdash-react/styles.css)
 
 | Property             | Type   | Required | Default | Description                                        |
 | -------------------- | ------ | -------- | ------- | -------------------------------------------------- |
