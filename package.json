@@ -26,7 +26,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "peerDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -75,7 +74,10 @@
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.12",
-    "axios": "^0.27.2",
-    "react": ">=16"
+    "axios": "^0.27.2"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": "^18.2.0"
   }
 }

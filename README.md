@@ -7,11 +7,11 @@ A component that renders a users projects from the Bettrdash API.
 ## Install
 
 ```bash
-npm install --save bettrdash-react axios @fontsource/inter
+npm install --save bettrdash-react
 
 or
 
-yarn add bettrdash-react axios @fontsource/inter
+yarn add bettrdash-react
 ```
 
 ## Usage
