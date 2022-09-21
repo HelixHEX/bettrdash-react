@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../styles.css';
 import { CardProps } from '../../utils/types';
 
-const List = ({
+const ListCard = ({
   project,
   style = { imageBackgroundColor: 'gray' },
 }: CardProps) => {
@@ -44,4 +44,4 @@ const List = ({
   );
 };
 
-export default List;
+export default ListCard;

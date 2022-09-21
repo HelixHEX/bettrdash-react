@@ -3,7 +3,7 @@ import axios from 'axios';
 import { API_URL } from '../../utils/constants';
 import '../../../styles.css';
 import { ProjectProps, Props } from '../../utils/types';
-import List from '../List';
+import ListCard from '../ListCard';
 
 const BettrList = ({ apiKey, style }: Props) => {
   const [projects, setProjects] = useState([]);
@@ -45,7 +45,7 @@ const BettrList = ({ apiKey, style }: Props) => {
       ) : (
         <div className="bettr-list-container">
           {projects.map((project: ProjectProps, index: number) => (
-            <List style={style} project={project} key={index} />
+            <ListCard style={style} project={project} key={index} />
           ))}
         </div>
       )}

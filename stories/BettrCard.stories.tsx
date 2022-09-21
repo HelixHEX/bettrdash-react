@@ -1,10 +1,10 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { BettrCard } from '../src';
+import { BettrGrid } from '../src';
 
 const meta: Meta = {
   title: 'BettrCard',
-  component: BettrCard,
+  component: BettrGrid,
   argTypes: {
     apiKey: {
       defaultValue: '123',
@@ -17,7 +17,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story = args => <BettrCard {...args} />;
+const Template: Story = args => <BettrGrid {...args} />;
 
 export const Default = Template.bind({});
 

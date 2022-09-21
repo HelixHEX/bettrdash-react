@@ -99,7 +99,41 @@ const Component = () => {
 export default Component;
 ```
 
-## Card Component Props
+
+### ListCard Component
+
+The list card component can also be imported directly from the library.
+
+```jsx
+import { ListCard } from 'bettrdash-react';
+
+const Component = () => {
+  const project = {
+    active: true,
+    createdAt: '2022-06-09T02:09:52.026Z',
+    description: 'The dashboard for developers',
+    github_url: 'https://github.com/HelixHEX/bettrdash',
+    image_url:
+      'https://blog.addthiscdn.com/wp-content/uploads/2015/11/code.png',
+    language: 'Javascript',
+    live_url: 'https://bettrdash.eliaswambugu.com',
+    name: 'BettrDash',
+    updatedAt: '2022-09-12T17:52:50.992Z',
+  };
+  return (
+    <ListCard
+      style={{
+        imageBackgroundColor: 'black',
+      }}
+      project={project}
+    />
+  );
+};
+
+export default Component;
+```
+
+## Card/ListCard Component Props
 
 | Property | Type   | Required | Default | Description                                                                          |
 | -------- | ------ | -------- | ------- | ------------------------------------------------------------------------------------ |
