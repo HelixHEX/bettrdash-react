@@ -1,0 +1,1 @@
+export const API_URL = 'https://api.bettrdash.eliaswambugu.com/v1/api/projects'
